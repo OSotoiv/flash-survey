@@ -1,0 +1,27 @@
+#flash-mgs {
+    font-weight: 500;
+    font-size: 1.2em;
+    width: 300px;
+    margin-left: 200px;
+    text-align: center;
+}
+
+section p {
+    border-radius: 3px;
+}
+
+.warning {
+    background-color: rgba(207, 114, 0, 0.576);
+}
+
+.success {
+    background-color: rgba(38, 102, 52, 0.577);
+}
+
+.error {
+    background-color: rgba(120, 17, 17, 0.576);
+}
+
+.card-title {
+    text-decoration: underline;
+}

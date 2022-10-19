@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+    <h1>Choose a Survey</h1>
+    {% for title, survey in surveys.items()%}
+    <div class="card mb-2" style="width: 21rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{survey.title}}</h5>
+            <p class="card-text">{{survey.instructions}}</p>
+            <form action="/start/{{title}}" method="POST">
+                <button class="btn btn-primary">start</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock%}

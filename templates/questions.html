@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+    <h1>{{survey_title}}</h1>
+
+    <p>{{question.question}}</p>
+    <div class="container">
+        <form action="/answer/{{survey}}/{{id}}" method="POST">
+            {% for c in question.choices %}
+            <div class="form-check">
+                <input class="form-check-input" value="{{c}}" type="radio" name="answer" id="{{c}}" checked>
+                <label class="form-check-label" for="{{c}}">
+                    {{c}}
+                </label>
+            </div>
+            {%endfor%}
+            <button class="btn btn-primary">submit</button>
+        </form>
+    </div>
+</div>
+{%endblock%}
